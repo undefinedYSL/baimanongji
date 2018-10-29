@@ -1,0 +1,3541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 帧布局 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+     <LinearLayout
+        android:id="@+id/footbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+       >
+
+        <include layout="@layout/home_footbar_layout" />
+    </LinearLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/controlbackground1"
+        android:orientation="vertical"
+        android:padding="2dip"
+        android:layout_above="@+id/footbar_layout">
+        <LinearLayout
+            android:id="@+id/tn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+                      <!-- 温室一 -->
+         <ScrollView
+            android:id="@+id/scrollView0"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbarStyle="outsideOverlay" >
+
+            <LinearLayout
+                android:id="@+id/layout_tab0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 手自动控制 -->
+
+                <TextView
+                    android:id="@+id/tv01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="自动控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv01_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="自动控制：开/关:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup01_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/zidongkongzhi_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="自动控制开"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/shoudongkongzhi_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="自动控制关"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 外遮阳控制 -->
+
+                <TextView
+                    android:id="@+id/tv02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="外遮阳控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv02_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="外遮阳AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup02_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_01_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_01_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 顶开窗电机 -->
+
+                <TextView
+                    android:id="@+id/tv03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="顶开窗机组控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv03_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="顶开窗机组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup03_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_01_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_01_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 内保温控制 -->
+
+                <TextView
+                    android:id="@+id/tv04"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="内保温控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout04"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv04_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="内保温组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup04_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_01_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_01_backstop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 湿帘外翻组 -->
+
+                <TextView
+                    android:id="@+id/tv05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="湿帘外翻控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv05_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="湿帘外翻组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup05_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_01_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_01_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 轴流风机控制 -->
+
+                <TextView
+                    android:id="@+id/tv06"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="轴流风机控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout06"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv06_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="轴流风机组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup06_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/zhouliufengji_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/zhouliufengji_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 补光灯控制 -->
+
+                <TextView
+                    android:id="@+id/tv07"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="补光灯控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout07"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv07_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup07_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv07_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No2）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup07_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_02_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_02_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv07_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No3）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup07_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_03_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_03_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 湿帘水泵控制 -->
+
+                <TextView
+                    android:id="@+id/tv08"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="湿帘水泵控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout08"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv08_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="湿帘水泵AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup08_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/shilianshuibeng_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/shilianshuibeng_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 泵站水泵控制 -->
+
+                <TextView
+                    android:id="@+id/tv09"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="泵站水泵控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout09"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv09_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="泵站水泵AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup09_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup09_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_02_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_02_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 电磁阀组 -->
+
+                <TextView
+                    android:id="@+id/tv10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="电磁阀控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv10_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_01_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_01_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No2）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_02_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_02_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No3）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_03_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_03_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No4）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_04_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_04_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No5）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_05_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_05_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No6）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_06_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_06_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No7）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_07_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_07_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No8）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_08_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_08_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No9）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_09_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_09_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No10）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_010_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_010_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No11）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_011_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_011_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No12）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_012_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_012_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No13）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_013_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_013_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_14"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No14）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_014_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_014_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_15"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No15）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_015_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_015_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv10_16"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No16）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup10_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_016_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_016_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <!-- 温室二 -->
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbarStyle="outsideOverlay" >
+
+            <LinearLayout
+                android:id="@+id/layout_tab1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 手自动控制 -->
+
+                <TextView
+                    android:id="@+id/tv11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="自动控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv11_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="自动控制：开/关:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup11_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/zidongkongzhi_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="自动控制开"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/shoudongkongzhi_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="自动控制关"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 外遮阳控制 -->
+
+                <TextView
+                    android:id="@+id/tv12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="外遮阳控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv12_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="外遮阳AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup12_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_11_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_11_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 顶开窗电机 -->
+
+                <TextView
+                    android:id="@+id/tv13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="顶开窗机组控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv13_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="顶开窗机组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup13_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_11_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_11_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 内保温控制 -->
+
+                <TextView
+                    android:id="@+id/tv14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="内保温控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv14_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="内保温组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup14_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_11_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_11_backstop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 湿帘外翻组 -->
+
+                <TextView
+                    android:id="@+id/tv15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="湿帘外翻控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv15_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="湿帘外翻组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup15_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_11_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_11_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 轴流风机控制 -->
+
+                <TextView
+                    android:id="@+id/tv16"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="轴流风机控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout16"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv16_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="轴流风机组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup16_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/zhouliufengji_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/zhouliufengji_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 补光灯控制 -->
+
+                <TextView
+                    android:id="@+id/tv17"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="补光灯控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout17"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv17_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No4）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup17_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv17_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No5）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup17_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_12_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_12_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv17_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No6）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup17_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_13_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_13_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 湿帘水泵控制 -->
+
+                <TextView
+                    android:id="@+id/tv18"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="湿帘水泵控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout18"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv18_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="湿帘水泵AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup18_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/shilianshuibeng_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/shilianshuibeng_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 泵站水泵控制 -->
+
+                <TextView
+                    android:id="@+id/tv19"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="泵站水泵控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout19"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv19_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="泵站水泵AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup19_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup19_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_12_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_12_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 电磁阀组 -->
+
+                <TextView
+                    android:id="@+id/tv20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="电磁阀控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv20_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup11_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_11_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_11_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No2）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv20_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No2）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_12_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_12_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No3）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_13_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_13_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No4）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_14_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_14_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No5）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_15_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_15_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No6）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_16_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_16_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No7）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_17_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_17_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No8）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_18_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_18_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No9）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_19_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_19_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No10）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_110_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_110_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No11）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_111_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_111_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No12）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_112_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_112_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No13）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_113_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_113_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_14"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No14）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_114_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_114_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_15"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No15）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_115_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_115_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv20_16"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No16）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup20_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_116_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_116_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 温室三 -->
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbarStyle="outsideOverlay" >
+
+            <LinearLayout
+                android:id="@+id/layout_tab2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 手自动控制 -->
+
+                <TextView
+                    android:id="@+id/tv21"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="自动控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout21"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv21_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="自动控制：开/关:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup21_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/zidongkongzhi_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="自动控制开"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/shoudongkongzhi_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="自动控制关"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 外遮阳控制 -->
+
+                <TextView
+                    android:id="@+id/tv22"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="外遮阳控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout22"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv22_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="外遮阳AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup22_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_21_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/waizheyang_21_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 顶开窗电机 -->
+
+                <TextView
+                    android:id="@+id/tv23"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="顶开窗机组控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout23"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv23_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="顶开窗机组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup23_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_21_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/dingkaichuang_21_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 内保温控制 -->
+
+                <TextView
+                    android:id="@+id/tv24"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="内保温控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout24"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv24_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="内保温组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup24_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_21_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/neibaowen_21_backstop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 湿帘外翻组 -->
+
+                <TextView
+                    android:id="@+id/tv25"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="湿帘外翻控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout25"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv25_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="湿帘外翻组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup25_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="展开停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_21_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+
+                        <RadioButton
+                            android:id="@+id/shilianwaifan_21_backoff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="收缩停止"
+                            android:textColor="@color/dark"
+                            android:textSize="12dip" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 轴流风机控制 -->
+
+                <TextView
+                    android:id="@+id/tv26"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="轴流风机控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout26"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv26_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="轴流风机组AC:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup26_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/zhouliufengji_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/zhouliufengji_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 补光灯控制 -->
+
+                <TextView
+                    android:id="@+id/tv27"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="补光灯控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout27"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv27_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No6）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup27_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv27_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No7）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup27_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_22_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_22_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv27_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="补光灯AC（No9）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup27_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/buguang_23_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/buguang_23_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 湿帘水泵控制 -->
+
+                <TextView
+                    android:id="@+id/tv28"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="湿帘水泵控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout28"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv28_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="湿帘水泵AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup28_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/shilianshuibeng_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/shilianshuibeng_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 泵站水泵控制 -->
+
+                <TextView
+                    android:id="@+id/tv29"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="泵站水泵控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout29"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv29_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="泵站水泵AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup29_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup29_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_22_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/bengzhanshuibeng_22_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 电磁阀组 -->
+
+                <TextView
+                    android:id="@+id/tv30"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/top_bar_bg1"
+                    android:clickable="true"
+                    android:gravity="center_vertical|left"
+                    android:text="电磁阀控制"
+                    android:textColor="#000000"
+                    android:textSize="20dip"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:id="@+id/layout30"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv30_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No1）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_21_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_21_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No2）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_22_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_22_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No3）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_23_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_23_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No4）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_24_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_24_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No5）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_25_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_25_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No6）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_26_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_26_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No7）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_27_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_27_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No8）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_28_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_28_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No9）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_29_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_29_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No10）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_210_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_210_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No11）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_211_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_211_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No12）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_212_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_212_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No13）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_213_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_213_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_14"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No14）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_214_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_214_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_15"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No15）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_215_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_215_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv30_16"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="电磁阀AC（No16）:"
+                        android:textColor="@color/dark"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup30_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/diancifa_216_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启动"
+                            android:textColor="@color/dark" />
+
+                        <RadioButton
+                            android:id="@+id/diancifa_216_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="停止"
+                            android:textColor="@color/dark" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

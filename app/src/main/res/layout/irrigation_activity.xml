@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing3">
+
+    <RelativeLayout
+        android:id="@+id/title_ry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+        <include layout="@layout/irrigation_title_layout" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include layout="@layout/home_footbar_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_text"
+        android:layout_width="150dp"
+        android:layout_height="280dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="7"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="  ▶名称：" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="     单层椰糠条基质栽培" />
+
+        <TextView
+            android:id="@+id/tv_b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="  ▶湿度1："/>
+
+        <TextView
+            android:id="@+id/tv_box1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="     10%"/>
+
+        <TextView
+            android:id="@+id/tv_b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="  ▶湿度2："/>
+
+        <TextView
+            android:id="@+id/tv_box2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="     10%"/>
+
+        <TextView
+            android:id="@+id/tv_b3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="  ▶湿度3："/>
+
+        <TextView
+            android:id="@+id/tv_box3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="     30%"/>
+
+        <TextView
+            android:id="@+id/tv_b4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="  ▶湿度4："/>
+
+        <TextView
+            android:id="@+id/tv_box4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="     80%"/>
+
+        <TextView
+            android:id="@+id/tv_b5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="  ▶水肥浓度："/>
+
+        <TextView
+            android:id="@+id/tv_box5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="     80S/m"/>
+
+        <TextView
+            android:id="@+id/tv_b6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="  ▶灌溉流量："/>
+
+        <TextView
+            android:id="@+id/tv_box6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="     80ml"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_c1"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintCircle="@id/LL_text"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="258dp">
+
+        <ImageView
+            android:id="@+id/iv_c1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/device"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="装置一"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_c2"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintCircle="@id/LL_text"
+        app:layout_constraintCircleAngle="27"
+        app:layout_constraintCircleRadius="252dp">
+
+        <ImageView
+            android:id="@+id/iv_c2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/device"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="装置二"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_c3"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintCircle="@id/LL_text"
+        app:layout_constraintCircleAngle="54"
+        app:layout_constraintCircleRadius="240dp">
+
+        <ImageView
+            android:id="@+id/iv_c3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/device"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="装置三"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_c4"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintCircle="@id/LL_text"
+        app:layout_constraintCircleAngle="84"
+        app:layout_constraintCircleRadius="227dp">
+
+        <ImageView
+            android:id="@+id/iv_c4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/device"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="装置四"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_c5"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintCircle="@id/LL_text"
+        app:layout_constraintCircleAngle="116"
+        app:layout_constraintCircleRadius="217dp">
+
+        <ImageView
+            android:id="@+id/iv_c5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/device"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="装置五"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="5"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_control"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:text="开启滴灌装置1控制"
+        android:background="@drawable/contact_select_list_style"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/control_btn_style"/>
+
+
+</android.support.constraint.ConstraintLayout>
